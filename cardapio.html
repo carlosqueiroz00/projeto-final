@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Grão &amp; Prosa</title>
+  <meta name="description" content="Cardápio da Grão & Prosa: cafés, pães e bolos feitos na hora.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__topo">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="" width="32" height="32">
+        <span>Grão &amp; Prosa</span>
+      </a>
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="container menu" id="menu" aria-label="Menu principal">
+      <a href="index.html" class="menu__link">Home</a>
+      <a href="cardapio.html" class="menu__link ativo">Cardápio</a>
+      <a href="contato.html" class="menu__link">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="faixa-titulo">
+      <h1>Nosso Cardápio</h1>
+      <p>Tudo feito na hora, do jeitinho que você gosta.</p>
+    </section>
+
+    <section class="secao" aria-label="Produtos">
+      <div class="container grade">
+        <!-- Cada produto guarda nome e preço em atributos data-* para o JavaScript ler -->
+        <article class="card produto" data-nome="Espresso" data-preco="6">
+          <img src="img/espresso.jpg" alt="Xícara de espresso sobre balcão de madeira">
+          <div class="card__corpo">
+            <h3>Espresso</h3>
+            <p>Café curto e intenso, extraído na hora.</p>
+            <p class="preco">R$ 6,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card produto" data-nome="Cappuccino Cremoso" data-preco="12">
+          <img src="img/cappuccino.jpg" alt="Cappuccino com espuma e canela em xícara de cerâmica">
+          <div class="card__corpo">
+            <h3>Cappuccino Cremoso</h3>
+            <p>Espresso com leite vaporizado e espuma macia.</p>
+            <p class="preco">R$ 12,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card produto" data-nome="Latte Caramelo" data-preco="14">
+          <img src="img/latte.jpg" alt="Latte com calda de caramelo em copo de vidro">
+          <div class="card__corpo">
+            <h3>Latte Caramelo</h3>
+            <p>Café com leite e calda de caramelo.</p>
+            <p class="preco">R$ 14,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card produto" data-nome="Pão de Queijo" data-preco="8">
+          <img src="img/pao-de-queijo.jpg" alt="Cesta com pães de queijo quentinhos">
+          <div class="card__corpo">
+            <h3>Pão de Queijo</h3>
+            <p>Quentinho, crocante por fora e macio por dentro.</p>
+            <p class="preco">R$ 8,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card produto" data-nome="Croissant de Chocolate" data-preco="13">
+          <img src="img/croissant.jpg" alt="Croissant cortado ao meio com recheio de chocolate">
+          <div class="card__corpo">
+            <h3>Croissant de Chocolate</h3>
+            <p>Massa folhada com recheio de chocolate.</p>
+            <p class="preco">R$ 13,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card produto" data-nome="Bolo de Cenoura" data-preco="11">
+          <img src="img/bolo-cenoura.jpg" alt="Fatia de bolo de cenoura com cobertura de chocolate">
+          <div class="card__corpo">
+            <h3>Bolo de Cenoura</h3>
+            <p>Fatia generosa com cobertura de chocolate.</p>
+            <p class="preco">R$ 11,00</p>
+            <button class="botao botao--largo botao-pedir">Pedir</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Resumo do pedido: começa escondido e o JavaScript mostra quando o cliente pede algo -->
+    <aside class="pedido" id="pedido" hidden aria-live="polite">
+      <div>
+        <strong>Seu pedido</strong>
+        <p id="pedidoResumo">0 itens</p>
+      </div>
+      <div class="pedido__acoes">
+        <span class="pedido__total" id="pedidoTotal">R$ 0,00</span>
+        <button class="pedido__limpar" id="pedidoLimpar">Limpar</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a href="index.html" class="logo logo--claro">
+          <img src="img/logo-claro.svg" alt="" width="32" height="32">
+          <span>Grão &amp; Prosa</span>
+        </a>
+        <p class="status" id="status">Verificando horário...</p>
+      </div>
+      <div>
+        <h2>Visite-nos</h2>
+        <address>
+          <p>Rua das Flores, 123, Centro</p>
+          <p>Seg a Sáb, 7h às 19h</p>
+        </address>
+      </div>
+      <div>
+        <h2>Navegue</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Siga-nos</h2>
+        <p>@graoeprosa</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mensagem rápida ("toast") que aparece ao clicar em Pedir ou enviar o formulário -->
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

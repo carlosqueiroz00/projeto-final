@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grão &amp; Prosa | Cafeteria</title>
+  <meta name="description" content="Grão & Prosa: café especial, pães fresquinhos e um cantinho para você relaxar.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <!-- Fontes do Figma: Playfair Display (títulos) e Inter (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="cabecalho">
+    <div class="container cabecalho__topo">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="" width="32" height="32">
+        <span>Grão &amp; Prosa</span>
+      </a>
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="container menu" id="menu" aria-label="Menu principal">
+      <a href="index.html" class="menu__link ativo">Home</a>
+      <a href="cardapio.html" class="menu__link">Cardápio</a>
+      <a href="contato.html" class="menu__link">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== DESTAQUE (HERO) ===== -->
+    <section class="container">
+      <div class="hero">
+        <h1>Café feito com calma, servido com carinho</h1>
+        <p>Grãos selecionados, pães fresquinhos e um cantinho para você relaxar.</p>
+        <div class="hero__botoes">
+          <a href="cardapio.html" class="botao">Ver cardápio</a>
+          <a href="contato.html" class="botao botao--contorno">Fale conosco</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIFERENCIAIS ===== -->
+    <section class="faixa-bege secao">
+      <div class="container">
+        <h2 class="titulo-secao">Por que você vai gostar</h2>
+        <div class="grade">
+          <article class="card">
+            <img src="img/cafe-especial.jpg" alt="Xícara de cappuccino com arte no leite sobre mesa de madeira">
+            <div class="card__corpo">
+              <h3>Café Especial</h3>
+              <p>Grãos de produtores locais, torra artesanal.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/paes-bolos.jpg" alt="Balcão de padaria com pães e bolos caseiros">
+            <div class="card__corpo">
+              <h3>Pães e Bolos</h3>
+              <p>Assados todas as manhãs na casa.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/ambiente.jpg" alt="Salão da cafeteria com poltronas, plantas e estante de livros">
+            <div class="card__corpo">
+              <h3>Ambiente Aconchegante</h3>
+              <p>Wi-Fi, tomadas e muito sossego.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a href="index.html" class="logo logo--claro">
+          <img src="img/logo-claro.svg" alt="" width="32" height="32">
+          <span>Grão &amp; Prosa</span>
+        </a>
+        <p>@graoeprosa</p>
+        <p class="status" id="status">Verificando horário...</p>
+      </div>
+      <div>
+        <h2>Visite-nos</h2>
+        <address>
+          <p>Rua das Flores, 123, Centro</p>
+          <p>Seg a Sáb, 7h às 19h</p>
+        </address>
+      </div>
+      <div>
+        <h2>Navegue</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

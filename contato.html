@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Grão &amp; Prosa</title>
+  <meta name="description" content="Fale com a Grão & Prosa: endereço, telefone, horário e formulário de contato.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__topo">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="" width="32" height="32">
+        <span>Grão &amp; Prosa</span>
+      </a>
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="container menu" id="menu" aria-label="Menu principal">
+      <a href="index.html" class="menu__link">Home</a>
+      <a href="cardapio.html" class="menu__link">Cardápio</a>
+      <a href="contato.html" class="menu__link ativo">Contato</a>
+    </nav>
+    <div class="container">
+      <a href="#onde-estamos" class="botao botao--largo">Visite-nos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="faixa-titulo">
+      <h1>Venha tomar um café com a gente</h1>
+    </section>
+
+    <div class="container contato secao">
+      <!-- Informações de contato -->
+      <section id="onde-estamos">
+        <h2 class="titulo-pagina">Onde estamos</h2>
+        <dl class="info">
+          <dt>Endereço</dt>
+          <dd>Rua das Flores, 123, Centro</dd>
+          <dt>Telefone</dt>
+          <dd><a href="tel:+5563999990000">(63) 99999-0000</a></dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:contato@graoeprosa.com">contato@graoeprosa.com</a></dd>
+          <dt>Horário</dt>
+          <dd>Seg a Sáb, 7h às 19h</dd>
+        </dl>
+      </section>
+
+      <!-- Formulário: "novalidate" desliga a validação do navegador para o nosso JavaScript validar -->
+      <section>
+        <h2 class="sr-only">Envie uma mensagem</h2>
+        <form class="formulario" id="formContato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+            <small class="erro" id="erroNome"></small>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail">
+            <small class="erro" id="erroEmail"></small>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+            <small class="erro" id="erroMensagem"></small>
+          </div>
+          <button type="submit" class="botao botao--largo">Enviar mensagem</button>
+        </form>
+      </section>
+
+      <section class="mapa-secao">
+        <h2 class="titulo-pagina">Mapa</h2>
+        <div class="mapa">Mapa</div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <a href="index.html" class="logo logo--claro">
+          <img src="img/logo-claro.svg" alt="" width="32" height="32">
+          <span>Grão &amp; Prosa</span>
+        </a>
+        <p>@graoeprosa</p>
+        <p class="status" id="status">Verificando horário...</p>
+      </div>
+      <div>
+        <h2>Visite-nos</h2>
+        <address>
+          <p>Rua das Flores, 123, Centro</p>
+          <p>Seg a Sáb, 7h às 19h</p>
+        </address>
+      </div>
+      <div>
+        <h2>Navegue</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
